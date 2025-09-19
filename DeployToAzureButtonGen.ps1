@@ -14,27 +14,23 @@
 
 #>
 
-params(
+Param(
     # URL of the ARM template to deploy
     [Parameter(Mandatory=$true)]
-    [string]$TemplateUrl,
-
-    # Output file for the generated markdown snippet
-    [Parameter(Mandatory=$false)]
-    [string]$OutputFile
+    [string]$TemplateUrl
 )
 
 # Convert the template URL to a URI-encoded string
-$TemplateUri = [uri]::EscapeDataString($TemplateUrl)
+$uri= [uri]::EscapeDataString($TemplateUrl)
 
 # Generate the markdown snippet
 $MarkdownSnippet = @"
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/$TemplateUri)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/$uri)
 "@
 
 # generate html snippet
 $HtmlSnippet = @"
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/$TemplateUri">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/$uri">
     <img src="https://aka.ms/deploytoazurebutton" alt="Deploy to Azure" />
 </a>
 "@  
