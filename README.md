@@ -24,19 +24,19 @@ Read more at: [Use a deployment button to deploy remote templates](https://learn
 
 ## Console Output
 
-    **Markdown**
+**Markdown**
 
-    ```powershell
-        [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>)
-    ```
+```powershell
+    [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>)
+```
 
-    **HTML**
+**HTML**
 
-    ```powershell
-        <a href="https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>">
-            <img src="https://aka.ms/deploytoazurebutton" alt="Deploy to Azure" />
-        </a>
-    ```
+```powershell
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>">
+        <img src="https://aka.ms/deploytoazurebutton" alt="Deploy to Azure" />
+    </a>
+```
 
 ## Notes
 
