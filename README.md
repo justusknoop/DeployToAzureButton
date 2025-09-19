@@ -18,13 +18,16 @@ Generates **Markdown** and **HTML** snippets for the "Deploy to Azure" button fo
 
 ## Console Output
 **Markdown**
+```powershell
     [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>)
+```
 
 **HTML**
+```powershell
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/<URL-ENCODED-TEMPLATE-URL>">
         <img src="https://aka.ms/deploytoazurebutton" alt="Deploy to Azure" />
     </a>
-
+```
 ## Notes
 - The template URL is URL-encoded internally (`[uri]::EscapeDataString`).
 - If your script contains a hardcoded assignment to `$TemplateUrl`, remove it to allow the `-TemplateUrl` parameter to take effect.
