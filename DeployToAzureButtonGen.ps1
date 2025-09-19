@@ -24,11 +24,8 @@ params(
     [string]$OutputFile
 )
 
-
-$TemplateUrl = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/quickstarts/microsoft.storage/storage-account-create/azuredeploy.json"
+# Convert the template URL to a URI-encoded string
 $TemplateUri = [uri]::EscapeDataString($TemplateUrl)
-
-
 
 # Generate the markdown snippet
 $MarkdownSnippet = @"
